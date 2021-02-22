@@ -23,7 +23,6 @@ ipch
 *.suo
 *.VC.db
 *.VC.VC.opendb
-x64
 
 ## Emscripten artifacts
 examples/*.o.tmp
