@@ -1,0 +1,31 @@
+#pragma once
+
+#ifndef __SQUARE_HPP__
+#define __SQUARE_HPP__
+
+#include "Shape.h"
+
+class Square : public Shape {
+
+public:
+
+	Square() = default;
+	~Square() = default;
+
+	Square(float, float, float, float, float, float);
+
+	Shape* Copy() const override;
+	void Update() override;
+	void Draw() override;
+	void IsClickingOnShape(vec2) override;
+	void UpdateShapeWASD(bool, bool, bool, bool) override;
+	std::string Type() override;
+
+	float GetSize();
+	void SetSize(float);
+
+private:
+	float _size;
+};
+
+#endif
