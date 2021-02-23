@@ -8,9 +8,9 @@ Simple Cinder & ImGui application.
 git clone https://github.com/DarkoVasiljevic/cinder-app.git
 cd cinder-app
 
-running  >>  cinder-app/vc2019/MyFirstCinderApp.sln
+running   >>  cinder-app/vc2019/MyFirstCinderApp.sln
 building  >>  [ select: Build -> Batch Build -> checking: Debug|x64 and Release|x64 -> press: Build ]
-starting app
+starting app application
 ```
 
 ## Info
