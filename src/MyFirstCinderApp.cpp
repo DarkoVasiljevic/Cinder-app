@@ -240,7 +240,7 @@ void MyFirstCinderApp::CreateNewWindow(const std::string& name)
 		ImGui::SetNextWindowPos(vec2(270, 0), 0, vec2(0, 0));
 		ImGui::SetNextWindowSize(vec2(getWindowWidth() - 205*2 - 140, 50), 0);
 
-		ImGui::Begin("Header\t\t\t\t\tpress SPACE to animate shapes");
+		ImGui::Begin("Header\t\t\t\t\tpress SPACE to animate/stop shapes");
 
 		if (ImGui::BeginMenu("File")) {
 
