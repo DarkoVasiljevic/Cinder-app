@@ -10,7 +10,7 @@ cd cinder-app
 
 running   >>  cinder-app/vc2019/MyFirstCinderApp.sln
 building  >>  [ select: Build -> Batch Build -> check: Debug|x64 and Release|x64 -> press: Build ]
-starting application
+starting x64 app
 ```
 
 ## Info
