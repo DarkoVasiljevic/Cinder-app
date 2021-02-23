@@ -15,13 +15,14 @@ starting x64 app
 
 ## Info
 ```bash
-Application contains: Main window and three ImGui windows ( List, Properties, Header ).
+Application contains: Main window and four ImGui windows ( List, Properties, Header, Harmonica ).
 
 'Main' window functions:
    >> create a shapes and draw it on the screen by clicking inside window space,
    >> modify last objects location by pressing WASD keys,
    >> delete objects by right mouse click,
-   >> animate objects in random direction by pressing SPACE button.
+   >> animate objects in random direction by pressing SPACE button,
+   >> set background for app by draging and droping images (.jpeg | .png) inside window space.
 
 'List' window functions:
    >> hold dynamically list box of all added/removed shapes.
@@ -34,4 +35,7 @@ Application contains: Main window and three ImGui windows ( List, Properties, He
   >> contain a menu item 'File' witch holds two additional items, 
   >> create a `project.json` file by clicking on 'Save',
   >> load project settings by clicking on 'Open'.
+  
+'Harmonica' window functions:
+  >>  display all added images in a list of file names.
 ```
