@@ -41,6 +41,9 @@
     <ClInclude Include="RapidJson.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h">
@@ -69,6 +72,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RapidJson.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>

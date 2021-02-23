@@ -209,6 +209,7 @@ xcopy /y "..\..\..\lib\msw\$(PlatformTarget)\d3dcompiler_46.dll" "$(OutDir)"</Co
   <ItemGroup>
     <ClCompile Include="..\src\MyFirstCinderApp.cpp" />
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Image.cpp" />
     <ClCompile Include="RapidJson.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Shape.cpp" />
@@ -218,6 +219,7 @@ xcopy /y "..\..\..\lib\msw\$(PlatformTarget)\d3dcompiler_46.dll" "$(OutDir)"</Co
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h" />
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="Image.h" />
     <ClInclude Include="RapidJson.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Shape.h" />

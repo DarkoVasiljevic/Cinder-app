@@ -46,7 +46,7 @@ void Circle::Update()
 		_velocity.x *= -1.0f;
 	}
 
-	if (_location.Y - _radius < 50 || _location.Y + _radius > getWindowSize().y)
+	if (_location.Y - _radius < 50 || _location.Y + _radius + 100 > getWindowSize().y)
 	{
 		_velocity.y *= -1.0f;
 	}

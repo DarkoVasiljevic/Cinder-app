@@ -1,6 +1,6 @@
  MyFirstCinderApp
 
- Timestamp is 6034d1cc (Tue Feb 23 10:58:36 2021)
+ Timestamp is 6034d539 (Tue Feb 23 11:13:13 2021)
 
  Preferred load address is 0000000140000000
 
@@ -10626,8 +10626,8 @@
  0002:00036808       ??_C@_0BC@EOODALEL@Unknown?5exception@ 0000000140173808     MyFirstCinderApp.obj
  0002:00036820       ??_C@_0BF@KINCDENJ@bad?5array?5new?5length@ 0000000140173820     MyFirstCinderApp.obj
  0002:00036838       ??_C@_0BA@JFNIOLAK@string?5too?5long@ 0000000140173838     MyFirstCinderApp.obj
- 0002:00036848       ??_C@_00CNPNBAHC@@         0000000140173848     MyFirstCinderApp.obj
  0002:00036848       ?emptyString@?$GenericStringRef@D@rapidjson@@0QBDB 0000000140173848     RapidJson.obj
+ 0002:00036848       ??_C@_00CNPNBAHC@@         0000000140173848     MyFirstCinderApp.obj
  0002:00036850       ??_C@_0BG@HGEDEDEC@invalid?5stoi?5argument@ 0000000140173850     MyFirstCinderApp.obj
  0002:00036868       ??_C@_0BL@MFFNMGGC@stoi?5argument?5out?5of?5range@ 0000000140173868     MyFirstCinderApp.obj
  0002:00036884       ??_C@_04PPBEGPNI@List@     0000000140173884     MyFirstCinderApp.obj
@@ -10651,9 +10651,9 @@
  0002:00036928       ??_C@_08NMAPBDDP@Triangle@ 0000000140173928     MyFirstCinderApp.obj
  0002:00036934       ??_C@_06HCAKHJJK@Height@   0000000140173934     MyFirstCinderApp.obj
  0002:0003693c       ??_C@_05IBAMDCFI@Width@    000000014017393c     MyFirstCinderApp.obj
- 0002:00036948       ??_C@_0CK@DKDFPMIO@Header?7?7?7?7?7press?5ESCAPE?5to?5anim@ 0000000140173948     MyFirstCinderApp.obj
- 0002:00036974       ??_C@_04INACKGJP@Save@     0000000140173974     MyFirstCinderApp.obj
- 0002:0003697c       ??_C@_04DNCDCIAE@Open@     000000014017397c     MyFirstCinderApp.obj
+ 0002:00036948       ??_C@_0CO@PJBFJM@Header?7?7?7?7?7press?5SPACE?5to?5anima@ 0000000140173948     MyFirstCinderApp.obj
+ 0002:00036978       ??_C@_04INACKGJP@Save@     0000000140173978     MyFirstCinderApp.obj
+ 0002:00036980       ??_C@_04DNCDCIAE@Open@     0000000140173980     MyFirstCinderApp.obj
  0002:00036988       ??_C@_0BC@PCJCMGAL@No?5selected?5shape@ 0000000140173988     MyFirstCinderApp.obj
  0002:000369a0       ??_C@_0BB@MKGAEDKE@MyFirstCinderApp@ 00000001401739a0     MyFirstCinderApp.obj
  0002:000369b8       ??_C@_0BI@CFPLBAOH@invalid?5string?5position@ 00000001401739b8     MyFirstCinderApp.obj
@@ -10695,19 +10695,19 @@
  0002:000378c0       ??_7Shape@@6B@             00000001401748c0     Rectangle.obj
  0002:000378f8       ??_C@_0BB@GCADKGJO@map?1set?5too?5long@ 00000001401748f8     ShapePark.obj
  0002:0003790c       __real@3dcccccd            000000014017490c     MyFirstCinderApp.obj
- 0002:00037910       __real@3f800000            0000000140174910     Circle.obj
+ 0002:00037910       __real@3f800000            0000000140174910     MyFirstCinderApp.obj
  0002:00037918       __real@3fc99999a0000000    0000000140174918     MyFirstCinderApp.obj
  0002:00037920       __real@40000000            0000000140174920     Circle.obj
  0002:00037928       __real@4004000000000000    0000000140174928     Circle.obj
- 0002:00037930       __real@40200000            0000000140174930     Circle.obj
+ 0002:00037930       __real@40200000            0000000140174930     MyFirstCinderApp.obj
  0002:00037938       __real@4024000000000000    0000000140174938     RapidJson.obj
- 0002:00037940       __real@40a00000            0000000140174940     Shape.obj
+ 0002:00037940       __real@40a00000            0000000140174940     MyFirstCinderApp.obj
  0002:00037944       __real@40c90fdb            0000000140174944     Shape.obj
- 0002:00037948       __real@41700000            0000000140174948     Circle.obj
+ 0002:00037948       __real@41700000            0000000140174948     MyFirstCinderApp.obj
  0002:0003794c       __real@41c00000            000000014017494c     Circle.obj
- 0002:00037950       __real@42480000            0000000140174950     Circle.obj
+ 0002:00037950       __real@42480000            0000000140174950     MyFirstCinderApp.obj
  0002:00037954       __real@43480000            0000000140174954     MyFirstCinderApp.obj
- 0002:00037958       __real@434d0000            0000000140174958     Circle.obj
+ 0002:00037958       __real@434d0000            0000000140174958     MyFirstCinderApp.obj
  0002:0003795c       __real@43870000            000000014017495c     MyFirstCinderApp.obj
  0002:00037960       __real@4478c000            0000000140174960     MyFirstCinderApp.obj
  0002:00037964       __real@4f800000            0000000140174964     Circle.obj

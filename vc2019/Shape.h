@@ -4,16 +4,20 @@
 #define __SHAPE_HPP__
 
 #include "cinder/app/App.h"
+#include "cinder/app/FileDropEvent.h"
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 #include "cinder/CinderImGui.h"
+#include "cinder/gl/Texture.h"
 #include "cinder/Rand.h"
 
 using namespace ci;
 using namespace ci::app;
+using namespace gl;
 
 #include <string>
 #include <vector>
+#include <set>
 #include <time.h> 
 #include <typeinfo>
 

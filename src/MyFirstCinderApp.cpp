@@ -4,6 +4,7 @@
 #include "../vc2019/Rectangle.h"
 #include "../vc2019/ShapePark.h"
 #include "../vc2019/RapidJson.h"
+#include "../vc2019/Image.h"
 
 typedef struct {
 
@@ -22,6 +23,7 @@ public:
 	void mouseDown(MouseEvent event) override;
 	void keyDown(KeyEvent event) override;
 	void keyUp(KeyEvent event) override;
+	void fileDrop(FileDropEvent event) override;
 
 	void setup() override;
 	void draw() override;
@@ -55,6 +57,7 @@ private:
 	Shape::Enum_Shape _shape;
 	Property_t _propData;
 	RapidJson _json;
+	Image _image;
 };
 
 
@@ -74,6 +77,7 @@ void MyFirstCinderApp::update()
 	CreateNewWindow("List");
 	CreateNewWindow("Properties");
 	CreateNewWindow("File");
+	CreateNewWindow("Harmonica");
 
 	if (getElapsedSeconds() - _time < 0.2f)
 	{
@@ -98,6 +102,8 @@ void MyFirstCinderApp::draw()
 	gl::begin(GL_LINE_STRIP);
 
 	_shapePark.DrawShapeList();
+
+	_image.DrawBackgroundImage(getWindowBounds());
 
 	gl::end();
 }
@@ -158,6 +164,28 @@ void MyFirstCinderApp::keyUp(KeyEvent event)
 		break;
 	default:
 		break;
+	}
+}
+
+void MyFirstCinderApp::fileDrop(FileDropEvent event)
+{
+	const std::vector<fs::path>& files = event.getFiles();
+
+	for (auto& file : files) {
+
+		try
+		{
+			if (file.extension() == ".png" || file.extension() == ".jpg")
+			{
+				_image._imagesFileList.push_back(file.filename().string());
+				_image.SetBackgroundImage(files[0]);
+				_image.SaveImage(files[0].filename());
+			}
+		}
+		catch (const std::exception&)
+		{
+			console() << "unknown file extension" << std::endl;
+		}
 	}
 }
 
@@ -260,6 +288,19 @@ void MyFirstCinderApp::CreateNewWindow(const std::string& name)
 
 			ImGui::EndMenu();
 		}	
+
+		ImGui::End();
+	}
+	else if (name._Equal("Harmonica"))
+	{
+		ImGui::SetNextWindowPos(vec2(270, 600), 0, vec2(0, 0));
+		ImGui::SetNextWindowSize(vec2(getWindowWidth() - 205 * 2 - 140, 100), 0);
+
+		ImGui::Begin("Harmonica");
+
+		int _selectedFile = -1;
+
+		ImGui::ListBox("", &_selectedFile, _image._imagesFileList, _image._imagesFileList.size());
 
 		ImGui::End();
 	}
