@@ -37,5 +37,5 @@ Application contains: Main window and four ImGui windows ( List, Properties, Hea
   >> load project settings by clicking on 'Open'.
   
 'Harmonica' window functions:
-  >>  display all added images in a list of file names.
+  >> display all added images in a list of file names.
 ```
