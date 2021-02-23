@@ -9,7 +9,7 @@ git clone https://github.com/DarkoVasiljevic/cinder-app.git
 cd cinder-app
 
 running   >>  cinder-app/vc2019/MyFirstCinderApp.sln
-building  >>  [ select: Build -> Batch Build -> checking: Debug|x64 and Release|x64 -> press: Build ]
+building  >>  [ select: Build -> Batch Build -> check: Debug|x64 and Release|x64 -> press: Build ]
 starting app application
 ```
 
