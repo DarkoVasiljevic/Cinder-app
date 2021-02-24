@@ -49,6 +49,9 @@ private:
 
 	bool _saveJSONresources = false;
 	bool _loadJSONresources = false;
+	bool _circleDraw = true;
+	bool _squareDraw = false;
+	bool _rectangleDraw = false;
 
 	std::string _selectedShape = "No selected shape";
 	int _selectedItem = -1;
@@ -112,7 +115,21 @@ void MyFirstCinderApp::draw()
 
 void MyFirstCinderApp::mouseDown(MouseEvent event)
 {
-	_shapePark.AddShape(new Circle(event.getPos().x, event.getPos().y));
+	if (event.isLeft())
+	{
+		if (_circleDraw)
+		{
+			_shapePark.AddShape(new Circle(event.getPos().x, event.getPos().y));
+		}
+		else if (_squareDraw)
+		{
+			_shapePark.AddShape(new Square(event.getPos().x, event.getPos().y));
+		}
+		else if (_rectangleDraw)
+		{
+			_shapePark.AddShape(new Rectangle(event.getPos().x, event.getPos().y));
+		}
+	}
 	
 	if (event.isRight())
 	{
@@ -261,6 +278,28 @@ void MyFirstCinderApp::CreateNewWindow(const std::string& name)
 		ImGui::Separator();
 		ImGui::DragFloat("Height", &_propData.height, 0.1f, 2.5f, getWindowWidth() / 15.0f);
 		ImGui::DragFloat("Width", &_propData.width, 0.1f, 2.5f, getWindowWidth() / 15.0f);
+		ImGui::Separator();
+		ImGui::Separator();
+		ImGui::Text("Check shape you want to draw:");
+		ImGui::Separator();
+		ImGui::Checkbox("Circle", &_circleDraw);
+		if (_circleDraw)
+		{
+			_squareDraw = false;
+			_rectangleDraw = false;
+		}
+		ImGui::Checkbox("Square", &_squareDraw);
+		if (_squareDraw)
+		{
+			_circleDraw = false;
+			_rectangleDraw = false;
+		}
+		ImGui::Checkbox("Triangle", &_rectangleDraw);
+		if (_rectangleDraw)
+		{
+			_squareDraw = false;
+			_circleDraw = false;
+		}
 
 		if (!Rogue)
 		{

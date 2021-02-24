@@ -13,6 +13,7 @@ public:
 	~Square() = default;
 
 	Square(float, float, float, float, float, float);
+	Square(float, float);
 
 	Shape* Copy() const override;
 	void Update() override;
@@ -23,6 +24,7 @@ public:
 
 	float GetSize();
 	void SetSize(float);
+	Rectf GetBounds();
 
 private:
 	float _size;

@@ -35,11 +35,15 @@ void ShapePark::AddShape(Shape* shape)
 void ShapePark::RemoveShape()
 {
     unsigned pos = -1;
-    for (auto it = _shapeList.rbegin(); it != _shapeList.rend(); it++)
+
+    for (auto it = _shapeList.begin(); it != _shapeList.end(); it++)
     {
         if (it->second->_forDelete)
-            _shapeList.erase(it->first);
+        {
+            pos = it->first;
+        }
     }
+    _shapeList.erase(pos);
 
     std::for_each(_shapeList.begin(), _shapeList.end(),
         [](std::pair<unsigned, Shape*> a) { a.second->_forDelete = false; });

@@ -122,5 +122,9 @@ void Image::CalculateAreaCoordinates(std::vector<Area>* tmp, int size)
 		}
 		return;
 	}
+	else if (size % 2 == 1)
+	{
+		// TODO::
+	}
 
 }

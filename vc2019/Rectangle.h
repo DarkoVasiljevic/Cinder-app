@@ -13,6 +13,7 @@ public:
 	~Rectangle() = default;
 
 	Rectangle(float, float, float, float, float, float, float);
+	Rectangle(float, float);
 
 	Shape* Copy() const override;
 	void Update() override;
@@ -20,6 +21,8 @@ public:
 	void IsClickingOnShape(vec2) override;
 	void UpdateShapeWASD(bool, bool, bool, bool) override;
 	std::string Type() override;
+
+	Rectf GetBounds();
 
 	float GetWidth();
 	void SetWidth(float);

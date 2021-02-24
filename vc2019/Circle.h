@@ -30,6 +30,8 @@ public:
 	float GetRadius();
 	void SetRadius(float);
 
+	//bool _forDelete = false;
+
 private:
 	float _radius;
 	
