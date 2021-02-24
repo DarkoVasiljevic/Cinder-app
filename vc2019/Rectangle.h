@@ -22,8 +22,9 @@ public:
 	void UpdateShapeWASD(bool, bool, bool, bool) override;
 	std::string Type() override;
 
-	Rectf GetBounds();
+	void UpdateDirection(int, int);
 
+	Rectf GetBounds();
 	float GetWidth();
 	void SetWidth(float);
 

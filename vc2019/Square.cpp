@@ -19,6 +19,18 @@ std::string Square::Type()
 
 void Square::Update()
 {
+	_location.X += cos(_direction.x) * _velocity.x;
+	_location.Y += sin(_direction.y) * _velocity.y;
+
+	if (_location.X - _size/2 < 205 || _location.X + _size/2 + 205 > getWindowSize().x)
+	{
+		_velocity.x *= -1.0f;
+	}
+
+	if (_location.Y - _size/2 < 50 || _location.Y + _size/2 + 100 > getWindowSize().y)
+	{
+		_velocity.y *= -1.0f;
+	}
 }
 
 void Square::Draw()
@@ -33,8 +45,20 @@ void Square::IsClickingOnShape(vec2 pos)
 	_forDelete = bounds.distance(pos) == 0;
 }
 
-void Square::UpdateShapeWASD(bool, bool, bool, bool)
+void Square::UpdateDirection(int dirX, int dirY)
 {
+	float speed = 2.5;
+
+	_location.X += dirX * speed;
+	_location.Y += dirY * speed;
+}
+
+void Square::UpdateShapeWASD(bool w, bool a, bool s, bool d)
+{
+	if (w)		{ UpdateDirection(0, -1); }
+	else if (a) { UpdateDirection(-1, 0); }
+	else if (s) { UpdateDirection(0, 1); }
+	else if (d) { UpdateDirection(1, 0); }
 }
 
 Rectf Square::GetBounds()
