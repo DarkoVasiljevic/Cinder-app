@@ -1,2 +1,0 @@
-C:\Users\darko.vasiljevic\Desktop\cinder-app\vc2019\x64\Debug\MyFirstCinderApp.exe
-C:\Users\darko.vasiljevic\Desktop\cinder-app\vc2019\x64\Debug\MyFirstCinderApp.pdb
