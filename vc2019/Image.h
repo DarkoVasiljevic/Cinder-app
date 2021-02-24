@@ -31,7 +31,8 @@ public:
 	void InitSheaders();
 	void DrawShadedImages();
 	void CreateBackgroundShadedImage(const std::vector<fs::path>&);
-	void CalculateAreaCoordinates(std::vector<Area>*, int);
+	void CalculateAreaCoordinates(std::vector<Area>*, int, vec2, vec2);
+	void CalculateHelper(std::vector<Area>*, int, vec2, vec2);
 
 public:
 	std::set<std::string> _imagesFileSet;

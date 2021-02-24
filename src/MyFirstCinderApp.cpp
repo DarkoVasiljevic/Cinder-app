@@ -109,7 +109,7 @@ void MyFirstCinderApp::draw()
 	//_image.DrawBackgroundImage(getWindowBounds(), _image._imageBackground);
 
 	_image.DrawShadedImages();
-
+	
 	_shapePark.DrawShapeList();
 }
 
@@ -194,15 +194,16 @@ void MyFirstCinderApp::fileDrop(FileDropEvent event)
 
 		try
 		{
-			if (file.extension() == ".png" || file.extension() == ".jpg")
-			{
-				_image._imagesFileList.push_back(file.filename().string());
+			if (!(file.extension() == ".png" || file.extension() == ".jpg"))
+				return;
+			
+			_image._imagesFileList.push_back(file.filename().string());
 				
-				_image.SetBackgroundImage(files[0]);
-				_image.SaveImage(files[0].filename());
-			}
+			_image.SetBackgroundImage(files[0]);
+			_image.SaveImage(files[0].filename());
+			
 		}
-		catch (const std::exception&)
+		catch (const ImageIoException&)
 		{
 			console() << "unknown file extension" << std::endl;
 		}

@@ -11,7 +11,7 @@ Circle::Circle(float radius = 0.0, float X = 0.0, float Y = 0.0, float R = 0.0, 
 Circle::Circle(float X, float Y)
 	: Shape(X, Y)
 {
-	_radius = 2.5 + Rand::randFloat(getWindowWidth() / 15.0f);
+	_radius = 10 + Rand::randFloat(getWindowWidth() / 15.0f);
 }
 
 Circle& Circle::operator=(Circle& c) {
