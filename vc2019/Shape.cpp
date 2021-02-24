@@ -39,9 +39,18 @@ std::string Shape::TypeOfShape(Enum_Shape e)
 }
 
 Shape::Location_t Shape::GetLocation() { return _location; }
-void Shape::SetLocation(Location_t& l) { _location = l; }
+void Shape::SetLocation(vec2& location) 
+{ 
+	_location.X = location.x;
+	_location.Y = location.y;
+}
 
 Shape::Color_t Shape::GetColor() { return _color; }
-void Shape::SetColor(Color_t& c) { _color = c; }
+void Shape::SetColor(vec3& color) 
+{ 
+	_color.R = color.r;
+	_color.G = color.g;
+	_color.B = color.b;
+}
 
 unsigned Shape::_id = 0;

@@ -48,10 +48,10 @@ public:
 	typedef struct { float R, G, B; } Color_t;
 
 	Location_t GetLocation();
-	void SetLocation(Location_t&);
+	void SetLocation(vec2&);
 
 	Color_t GetColor();
-	void SetColor(Color_t&);
+	void SetColor(vec3&);
 
 	bool _forDelete = false;
 	bool _animateLast = false;

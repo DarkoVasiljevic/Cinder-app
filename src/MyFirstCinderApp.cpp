@@ -69,6 +69,10 @@ void prepareSettings(MyFirstCinderApp::Settings* settings)
 
 void MyFirstCinderApp::setup()
 {
+	_image ._frameBuffer = Fbo::create(640, 480);
+
+	_image.InitSheaders();
+
 	ImGui::Initialize();
 }
 
@@ -99,13 +103,11 @@ void MyFirstCinderApp::draw()
 {
 	gl::clear(Color::gray(0.1f));
 
-	gl::begin(GL_LINE_STRIP);
+	//_image.DrawBackgroundImage(getWindowBounds(), _image._imageBackground);
+
+	_image.DrawShadedImages();
 
 	_shapePark.DrawShapeList();
-
-	_image.DrawBackgroundImage(getWindowBounds());
-
-	gl::end();
 }
 
 void MyFirstCinderApp::mouseDown(MouseEvent event)
@@ -178,6 +180,7 @@ void MyFirstCinderApp::fileDrop(FileDropEvent event)
 			if (file.extension() == ".png" || file.extension() == ".jpg")
 			{
 				_image._imagesFileList.push_back(file.filename().string());
+				
 				_image.SetBackgroundImage(files[0]);
 				_image.SaveImage(files[0].filename());
 			}
@@ -187,6 +190,9 @@ void MyFirstCinderApp::fileDrop(FileDropEvent event)
 			console() << "unknown file extension" << std::endl;
 		}
 	}
+
+	_image.CreateBackgroundShadedImage(files);
+	_image._window = getWindowSize();
 }
 
 void MyFirstCinderApp::CreateNewWindow(const std::string& name)
@@ -327,6 +333,8 @@ void MyFirstCinderApp::UpdatePropertyData(int shapeId)
 		_propData.r = it->second->GetColor().R;
 		_propData.g = it->second->GetColor().G;
 		_propData.b = it->second->GetColor().B;
+
+		//it->second->SetColor(vec3(0, 0, 0));
 
 		if (it->second->Type()._Equal("Circle"))
 		{
