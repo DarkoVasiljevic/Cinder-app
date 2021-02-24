@@ -22,7 +22,7 @@ Application contains: Main window and four ImGui windows ( List, Properties, Hea
    >> modify last objects location by pressing WASD keys,
    >> delete objects by right mouse click,
    >> animate objects in random direction by pressing SPACE button,
-   >> set background for app by draging and droping images (.jpeg | .png) inside window space.
+   >> set background app by draging and droping images (.jpeg | .png) inside window space.
 
 'List' window functions:
    >> hold dynamically list box of all added/removed shapes.
