@@ -1,4 +1,4 @@
-# cinder-app
+# Cinder-app
 
 Simple Cinder & ImGui application.
 
